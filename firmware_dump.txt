@@ -1,0 +1,7 @@
+1)Client-- python3 -c "import tftpy; server = tftpy.TftpServer('./'); server.listen('0.0.0.0', 69)"
+2)Server --
+cat /dev/mtdblock0 > /tmp/mtd0.bin
+cat /dev/mtdblock1 > /tmp/mtd1.bin
+tftp -p -l /tmp/mtd0.bin -r mtd0.bin 192.168.11.100
+tftp -p -l /tmp/mtd1.bin -r mtd1.bin 192.168.11.100
+
